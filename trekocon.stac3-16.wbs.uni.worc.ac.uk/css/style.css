@@ -1,0 +1,38 @@
+/*Profile image*/
+.profileImage {
+	width: 150px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: solid 2px #C7C7C7;
+	padding: 10px;
+}
+/*Copywrite text colour*/
+#Copyright {
+	color: #fff;
+}
+label {
+	color: #fff;
+}
+#register {
+	color: #fff;
+}
+/*Button blackground and border colour along with margin for menu*/
+.btn {
+    background-color: #D3D3D3;
+    border-color: #A9A9A9;
+    margin-right: 10px;
+}
+/*Button colours when hovered over*/
+.btn:hover {    
+    background-color: #fff;
+	color: black;
+	border-color: #A9A9A9;
+}
+/*Trekocon banner image*/
+#jumbotron {
+	background-image: url("../img/Space.jpeg");
+}
+/*Trekocon text colour*/
+#trekocon {
+	color: white;
+}
