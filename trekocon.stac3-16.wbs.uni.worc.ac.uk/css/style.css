@@ -16,7 +16,13 @@ label {
 #register {
 	color: #fff;
 }
-/*Button blackground and border colour along with margin for menu*/
+#email {
+	color: #000;
+}
+#password {
+	color: #000;
+}
+/*Button background and border colour along with margin for menu*/
 .btn {
     background-color: #D3D3D3;
     border-color: #A9A9A9;

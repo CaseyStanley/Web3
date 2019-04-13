@@ -55,11 +55,11 @@
 				}
 			?>
 			<div class="form-group">
-				<label for="email">Email address</label>
+				<label for="email" id="email">Email address</label>
 				<input type="email" class="form-control" id="email" name="user_email" placeholder="email">
 			</div>
 			<div class="form-group">
-				<label for="password">Password</label>
+				<label for="password" id="password">Password</label>
 				<input type="password" class="form-control" id="password" name="user_password" placeholder="password">
 			</div>
 			<button type="submit" class="btn btn-default">Login</button>

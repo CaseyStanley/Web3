@@ -44,6 +44,10 @@
 						<a class="nav-link" href="index.php?p=events">Events <span class="sr-only"></span></a>
 					</li>
 					<li class="nav-item">
+						<!--Nearest Events -->
+						<a class="nav-link" href="index.php?p=nearestEvent" id="searchBtn">Nearest Events <span class="sr-only"></span></a>
+					</li>
+					<li class="nav-item">
 						<!-- Latest News -->
 						<a class="nav-link" href="index.php?p=news">Latest News <span class="sr-only"></span></a>
 					</li>
@@ -58,7 +62,7 @@
 				</ul>
 				
 				<!-- Secondary Navagation Bar -->
-				<ul class="nav navbar-nav navbar-right">
+				<ul class="nav navbar-nav navbar-right" id="SecNavBar">
 					<li class="nav-item dropdown">
 						<!-- Secondary Navagation Bar whilest logged in --> 	
 						<?php
@@ -99,11 +103,5 @@
 						}
 					?>
 				</ul>
-				
-				<!-- Search Bar -->
-				<!--<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-				</form>-->
 			</div>
 		</nav>

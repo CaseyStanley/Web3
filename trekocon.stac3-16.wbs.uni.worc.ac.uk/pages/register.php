@@ -118,4 +118,4 @@
 		<button type="submit" class="btn btn-default">Register</button>
 	</form>
 </div>
-<script src="js/register.js"></script>
+<!--<script src="javascript/register.js"></script>-->
