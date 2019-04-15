@@ -64,7 +64,6 @@ function errors(error)
 
 function distance(lat1,lon1,lat2,lon2)
 {
-	// km (change this constant to get miles)
 	var R = 6371;
 	var dLat = (lat2-lat1) * Math.PI / 180;
 	var dLon = (lon2-lon1) * Math.PI / 180;
