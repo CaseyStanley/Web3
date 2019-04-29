@@ -12,7 +12,7 @@ $("#button").click(function()
 
 function showLocation(position)
 {
-	var lat1, lon1, lat2, lon2, arrayLength, lowest, calc=[], id, name, idList=[];
+	var lat1, lon1, lat2, lon2, arrayLength, lowest, calc=[], id, name, eventID, idList=[];
 	lat1 = position.coords.latitude;
 	lon1 = position.coords.longitude;
 	
@@ -28,19 +28,38 @@ function showLocation(position)
 		idList.push(locationArray[i][0]);
 	}
 	
-	lowest = 0;
+	lowest=0;
 	for(i=1; i<calc.length; i++)
 	{
-		if(calc[i] < calc[lowest])
+		if(calc[i]<calc[lowest])
 		{
-			lowest = i;
+			lowest=i;
 		}
 	}
 	
 	id = idList[lowest];
-	name = locationArray[lowest];
-	$("#holder").append(name);
-	console.log(name);
+	
+	$.ajax({
+		url:"../pages/nearestEvent.php",
+		type: "post",
+		data: {id:id},
+
+	success: function(response)
+	{
+		alert(response);
+		$("#holder").append('<li data-id="'+ response + '">'+ eventID +'<i class="fa fa-times pull-right"></i></li>');
+		$('#id').val();
+	},
+	
+	error: function(){
+		$('#id').prop("disabled", false);
+	}
+});
+	
+	//name = locationArray[lowest];
+	//$("#holder").append(name);
+	//console.log(id);
+	//console.log(name);
 }
 
 function errors(error) 
@@ -64,6 +83,7 @@ function errors(error)
 
 function distance(lat1,lon1,lat2,lon2)
 {
+	// km (change this constant to get miles)
 	var R = 6371;
 	var dLat = (lat2-lat1) * Math.PI / 180;
 	var dLon = (lon2-lon1) * Math.PI / 180;
